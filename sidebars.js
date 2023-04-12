@@ -65,7 +65,7 @@ module.exports = {
               },
             ]
           },
-          {
+          /*{
             type: 'category',
             label: 'Stardust Ledger Anatomy',
             items: [{
@@ -90,7 +90,7 @@ module.exports = {
               label: `NFT Transactions`
             }
             ]
-          },
+          },*/
           {
             type: 'doc',
             id: 'explanations/node_software',
@@ -132,6 +132,70 @@ module.exports = {
         id: 'how_tos/overview',
         label: 'Overview'
       },
+        'how_tos/introduction',
+        'how_tos/simple_transfers',
+        {
+          type: "category",
+          label: 'Output Unlock Conditions',
+          items:
+              [
+                'how_tos/output-unlock-conditions/address',
+                'how_tos/output-unlock-conditions/expiration',
+                'how_tos/output-unlock-conditions/timelock',
+                'how_tos/output-unlock-conditions/storage-deposit-return',
+              ]
+        },
+        {
+          type: "category",
+          label: 'Output Features',
+          items:
+              [
+                'how_tos/output-features/sender',
+                'how_tos/output-features/metadata',
+                'how_tos/output-features/tag',
+              ]
+        },
+        {
+          type: "category",
+          label: 'Alias Transactions',
+          items:
+              [
+                'how_tos/alias/introduction',
+                'how_tos/alias/create',
+                'how_tos/alias/state-transitions',
+                'how_tos/alias/governance-transitions',
+                'how_tos/alias/destroy',
+                'how_tos/alias/unlock-alias-funds',
+              ]
+        },
+        {
+          type: "category",
+          label: 'Native Tokens and Foundries',
+          items:
+              [
+                'how_tos/native-token/introduction',
+                'how_tos/native-token/create-foundry',
+                'how_tos/native-token/mint-tokens',
+                'how_tos/native-token/melt-tokens',
+                'how_tos/native-token/burn-tokens',
+                'how_tos/native-token/state-transitions',
+                'how_tos/native-token/storage-deposits',
+              ]
+        },
+        {
+          type: "category",
+          label: 'NFTs',
+          items:
+              [
+                'how_tos/nft/introduction',
+                'how_tos/nft/mint',
+                'how_tos/nft/transfer',
+                'how_tos/nft/claim',
+                'how_tos/nft/burn',
+                'how_tos/nft/nft-as-a-wallet',
+                'how_tos/nft/nft-collections',
+              ]
+        },
         {
           type: 'doc',
           id: 'how_tos/backup_security',

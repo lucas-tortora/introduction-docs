@@ -1,0 +1,34 @@
+
+## Storage Deposit Returns in Transfers
+
+Stardust introduces a new system to protect the ledger size and hence node storage resources, called Byte-cost based
+Storage Deposit System. You can read more about it in [TIP-19](https://github.com/iotaledger/protocol-rfcs/blob/master/tips/TIP-0019/tip-0019.md).
+In short, every output in the ledger need to carry enough base tokens to cover for its network storage use.
+
+Implicitly this means that an output has to have a minimum amount of base tokens, otherwise it is considered invalid.
+The exact minimum depends on the size of the output and the protocol parameter _Virtual Byte Cost_. The implication of
+this is that is no longer possible to store microfunds in an output. So suppose you wanted to send 1i (0.000001 MIOTA):
+is it still possible?
+
+The answer is yes. With the [Storage Deposit Return Unlock Condition](https://github.com/iotaledger/tips/blob/master/tips/TIP-0018/tip-0018.md#storage-deposit-return-unlock-condition)
+it is possible to define spending constraints on outputs that you create. Let's assume that the minimum amount of funds
+that need to be present in an output is 100i. If you wanted to send only 1i to the recipient, you would transfer
+101i to the recipient's address with the extra condition that she can only use the funds if she refunds you in the
+very same transaction with 100i.
+
+Transaction G show the creation of an output with _Storage Deposit Return Unlock Condition_. Notice, that _Basic Output #11_
+holds 101i, and the unlock condition defines the _Return Amount_ of 100i to _ReturnAddress_ _ownerAddress_. All in all,
+the recipient can only freely use 1i when she consumes the output in Transaction H.
+
+![Transaction G - Sending microfunds](/img/stardust_explanations/stardust_ledger_anatomy/simple_transaction/tx_G.svg)
+
+In order for the recipient to claim the 1i, she needs to sweep it into one of her own outputs. Therefore, she consumes
+_Basic Output #12_ in the transaction that holds her funds. On the output side, she has to have _Basic Output #13_ that
+refunds the original sender, plus she creates _Basic Output #14_ into which she sweeps the 1i.
+
+![Transaction H - Receiving microfunds](/img/stardust_explanations/stardust_ledger_anatomy/simple_transaction/tx_H.svg)
+
+What forces the recipient to post and execute Transaction H? Nothing. She can just keep the sender's 100i in limbo forever.
+That is why it is handy that you can combine unlock conditions. For example, the sender can add an expiration
+condition to _Basic Output #11_. Once the output is expired, the recipient won't be able to claim the 1i and the sender
+takes full custody of the 101i in the output.

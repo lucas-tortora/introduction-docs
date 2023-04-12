@@ -25,7 +25,7 @@ The [tokenization framework](tokenization.md) enables many new functionalities t
 
 - Tokenization has low energy requirements and no fees.
 - Minting is fast and easy and can even be done on [Firefly](https://firefly.iota.org)!
-- [Native tokens](../ledger/foundry.md) and [NFTs](../ledger/nft.md) are first-class citizens of the core protocol:
+- [Native tokens](../../how_tos/native-token/introduction.mdx) and [NFTs](../../how_tos/nft/introduction.mdx) are first-class citizens of the core protocol:
   - They benefit from the security of Layer 1.
   - It is simple to fetch all tokens belonging to an account. With Ethereum, your ERC balance is stored in the contract state, making it difficult to get it quickly.
   - Adding native tokens should be extremely easy for exchanges (easier than adding ERC20 tokens for Ethereum).
