@@ -8,6 +8,9 @@ keywords:
 description: Create Alias Transfers in Stardust.
 image: /img/logo/preview.png
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Create an Alias
 
 Just like a regular _Basic Output_, an _Alias Output_ also has:
@@ -38,3 +41,25 @@ a unique _Alias ID_ must be generated.
 When _Alias Output #1_ from Transaction A is consumed in a subsequent transaction, the _Alias ID_ field in the
 transitioned alias must be set to the protocol generated unique identifier, which is the Blake2b-256 hash of the
 _Output ID_ of _Alias Output #1_.
+
+
+## Related How-to Guides, Code Examples and Tutorials
+
+<Tabs>
+<TabItem value="wallet.rs" label="wallet.rs" >
+
+- [Destroy an Alias Output](https://wiki.iota.org/shimmer/wallet.rs/how_tos/native_tokens/destroy_alias_output/)
+
+</TabItem>
+<TabItem value="iota.rs" label="iota.rs">
+
+- [Build an Alias Output](https://wiki.iota.org/shimmer/iota.rs/how_tos/build_alias_output/).
+
+</TabItem>
+<TabItem value="iota.js" label="iota.js">
+
+- [Mint a new Alias Address](https://wiki.iota.org/shimmer/iotajs/tutorials/alias-transactions/mint-new-alias/)
+- [Create an Alias Transaction](https://wiki.iota.org/shimmer/iotajs/tutorials/alias-transactions/alias-transaction/)
+
+</TabItem>
+</Tabs>

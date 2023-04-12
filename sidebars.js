@@ -6,128 +6,116 @@ module.exports = {
     },
         {
             type: 'category',
-            label: 'Explanations',
-            items:
-                [
-                    {
-                        type: 'category',
-                        label: 'What is Shimmer?',
-                        link: {
-                            type: 'doc',
-                            id: 'explanations/what-is-shimmer/introduction',
-                        },
-                        items: [
-                            'explanations/what-is-shimmer/layer-1-landscape',
-                            'explanations/what-is-shimmer/networks',
-                            {
-                                type: 'category',
-                                label: 'About Nodes',
-                                collapsed: true,
-                                link: {
-                                    type: 'doc',
-                                    id: 'explanations/what-is-shimmer/nodes/about-nodes',
-                                },
-                                items: [
-                                    'explanations/what-is-shimmer/nodes/about-nodes',
-                                    'explanations/what-is-shimmer/nodes/hornet',
-                                    'explanations/what-is-shimmer/nodes/become-a-node-operator',
-                                ],
-                            },
-                            'explanations/what-is-shimmer/clients',
-                            'explanations/what-is-shimmer/tokens-and-wallets',
-                        ],
-                    },
-                    {
-                        type: 'category',
-                        label: 'What is Stardust?',
-                        items: [
-                            {
-                                type: 'doc',
-                                id: 'explanations/what_is_stardust/what_is_stardust',
-                                label: `Introduction`
-                            },
-                            {
-                                type: 'doc',
-                                id: 'explanations/what_is_stardust/rethink_utxo',
-                                label: `Rethinking UTXO`
-                            },
-                            {
-                                type: 'doc',
-                                id: 'explanations/what_is_stardust/sc_support',
-                                label: `Smart Contract Chain Support`
-                            },
-                            {
-                                type: 'doc',
-                                id: 'explanations/what_is_stardust/tokenization',
-                                label: `Tokenization`
-                            },
-                            {
-                                type: 'doc',
-                                id: 'explanations/what_is_stardust/storage_deposit',
-                                label: `Storage Deposit`
-                            },
-                            {
-                                type: 'doc',
-                                id: 'explanations/what_is_stardust/unlock_conditions',
-                                label: `Output Unlock Conditions`
-                            },
-                            {
-                                type: 'doc',
-                                id: 'explanations/what_is_stardust/output_features',
-                                label: `Output Features`
-                            },
-                            {
-                                type: 'doc',
-                                id: 'explanations/what_is_stardust/protecting_users',
-                                label: `Protecting Users`
-                            },
-                            {
-                                type: 'doc',
-                                id: 'explanations/what_is_stardust/data_processing',
-                                label: `Offloading Data Processing`
-                            },
-                            {
-                                type: 'doc',
-                                id: 'explanations/what_is_stardust/dynamic_pow',
-                                label: `Dynamic PoW`
-                            },
-                        ]
-                    },
-                    {
+            label: 'What is Shimmer?',
+            link: {
+                type: 'doc',
+                id: 'explanations/what-is-shimmer/introduction',
+            },
+            items: [
+                'explanations/what-is-shimmer/layer-1-landscape',
+                'explanations/what-is-shimmer/networks',
+                {
+                    type: 'category',
+                    label: 'About Nodes',
+                    collapsed: true,
+                    link: {
                         type: 'doc',
-                        id: 'explanations/protocol_tip',
-                        label: 'Protocol TIPs'
+                        id: 'explanations/what-is-shimmer/nodes/about-nodes',
                     },
-                    {
-                        type: 'doc',
-                        id: 'explanations/faq',
-                        label: 'FAQ'
-                    },
-                ]
+                    items: [
+                        'explanations/what-is-shimmer/nodes/about-nodes',
+                        'explanations/what-is-shimmer/nodes/hornet',
+                        'explanations/what-is-shimmer/nodes/become-a-node-operator',
+                    ],
+                },
+                'explanations/what-is-shimmer/clients',
+                'explanations/what-is-shimmer/tokens-and-wallets',
+            ],
         },
         {
             type: 'category',
-            label: 'How Tos',
+            label: 'What is Stardust?',
             items: [
-                'how_tos/introduction',
+                {
+                    type: 'doc',
+                    id: 'explanations/what_is_stardust/what_is_stardust',
+                    label: `Introduction`
+                },
+                {
+                    type: 'doc',
+                    id: 'explanations/what_is_stardust/rethink_utxo',
+                    label: `Rethinking UTXO`
+                },
+                {
+                    type: 'doc',
+                    id: 'explanations/what_is_stardust/sc_support',
+                    label: `Smart Contract Chain Support`
+                },
+                {
+                    type: 'doc',
+                    id: 'explanations/what_is_stardust/tokenization',
+                    label: `Tokenization`
+                },
+                {
+                    type: 'doc',
+                    id: 'explanations/what_is_stardust/storage_deposit',
+                    label: `Storage Deposit`
+                },
+                {
+                    type: 'doc',
+                    id: 'explanations/what_is_stardust/unlock_conditions',
+                    label: `Output Unlock Conditions`
+                },
+                {
+                    type: 'doc',
+                    id: 'explanations/what_is_stardust/output_features',
+                    label: `Output Features`
+                },
+                {
+                    type: 'doc',
+                    id: 'explanations/what_is_stardust/protecting_users',
+                    label: `Protecting Users`
+                },
+                {
+                    type: 'doc',
+                    id: 'explanations/what_is_stardust/data_processing',
+                    label: `Offloading Data Processing`
+                },
+                {
+                    type: 'doc',
+                    id: 'explanations/what_is_stardust/dynamic_pow',
+                    label: `Dynamic PoW`
+                },
+                {
+                    type: 'doc',
+                    id: 'explanations/protocol_tip',
+                    label: 'Protocol TIPs'
+                },
+            ]
+        },
+        {
+            type: 'category',
+            label: 'Start Building',
+            items: [
+                'start-building/introduction',
                 {
                     type: "category",
                     label: 'Seeds, Accounts and Addresses',
                     items:
                         [
-                            'how_tos/seeds-accounts-and-addresses/seeds',
-                            'how_tos/seeds-accounts-and-addresses/accounts-and-addresses',
+                            'start-building/seeds-accounts-and-addresses/seeds',
+                            'start-building/seeds-accounts-and-addresses/accounts-and-addresses',
                         ]
                 },
+                'start-building/simple-transfer',
                 {
                     type: "category",
                     label: 'Output Unlock Conditions',
                     items:
                         [
-                            'how_tos/output-unlock-conditions/address',
-                            'how_tos/output-unlock-conditions/expiration',
-                            'how_tos/output-unlock-conditions/timelock',
-                            'how_tos/output-unlock-conditions/storage-deposit-return',
+                            'start-building/output-unlock-conditions/expiration',
+                            'start-building/output-unlock-conditions/timelock',
+                            'start-building/output-unlock-conditions/storage-deposit-return',
                         ]
                 },
                 {
@@ -135,22 +123,26 @@ module.exports = {
                     label: 'Output Features',
                     items:
                         [
-                            'how_tos/output-features/sender',
-                            'how_tos/output-features/metadata',
-                            'how_tos/output-features/tag',
+                            'start-building/output-features/sender',
+                            'start-building/output-features/metadata',
+                            'start-building/output-features/tag',
                         ]
                 },
                 {
                     type: "category",
                     label: 'Alias Transactions',
+                    link: {
+                        type:'doc',
+                        id:'start-building/alias/introduction'
+                    },
                     items:
                         [
-                            'how_tos/alias/introduction',
-                            'how_tos/alias/create',
-                            'how_tos/alias/state-transitions',
-                            'how_tos/alias/governance-transitions',
-                            'how_tos/alias/destroy',
-                            'how_tos/alias/unlock-alias-funds',
+                            'start-building/alias/introduction',
+                            'start-building/alias/create',
+                            'start-building/alias/state-transitions',
+                            'start-building/alias/governance-transitions',
+                            'start-building/alias/destroy',
+                            'start-building/alias/unlock-alias-funds',
                         ]
                 },
                 {
@@ -158,12 +150,12 @@ module.exports = {
                     label: 'Native Tokens and Foundries',
                     items:
                         [
-                            'how_tos/native-token/introduction',
-                            'how_tos/native-token/create-foundry',
-                            'how_tos/native-token/mint-tokens',
-                            'how_tos/native-token/melt-tokens',
-                            'how_tos/native-token/burn-tokens',
-                            'how_tos/native-token/storage-deposits',
+                            'start-building/native-token/introduction',
+                            'start-building/native-token/create-foundry',
+                            'start-building/native-token/mint-tokens',
+                            'start-building/native-token/melt-tokens',
+                            'start-building/native-token/burn-tokens',
+                            'start-building/native-token/storage-deposits',
                         ]
                 },
                 {
@@ -171,23 +163,23 @@ module.exports = {
                     label: 'NFTs',
                     items:
                         [
-                            'how_tos/nft/introduction',
-                            'how_tos/nft/mint',
-                            'how_tos/nft/transfer',
-                            'how_tos/nft/claim',
-                            'how_tos/nft/burn',
-                            'how_tos/nft/nft-as-a-wallet',
-                            'how_tos/nft/nft-collections',
+                            'start-building/nft/introduction',
+                            'start-building/nft/mint',
+                            'start-building/nft/transfer',
+                            'start-building/nft/claim',
+                            'start-building/nft/burn',
+                            'start-building/nft/nft-as-a-wallet',
+                            'start-building/nft/nft-collections',
                         ]
                 },
                 {
                     type: 'doc',
-                    id: 'how_tos/backup_security',
+                    id: 'start-building/backup_security',
                     label: 'Backup and Security'
                 },
                 {
                     type: 'doc',
-                    id: 'how_tos/verify_download',
+                    id: 'start-building/verify_download',
                     label: 'Verify Firefly Download'
                 },
             ]

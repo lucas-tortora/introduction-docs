@@ -1,0 +1,33 @@
+---
+keywords:
+- Ledger
+- UTXO
+- explanation
+description: Simple Transfers in Stardust.
+image: /img/logo/preview.png
+---
+# Transfer Funds to an Address
+
+A simple transaction moves funds from one user account to another. On a high level, a transaction must define 3 things:
+ - **Inputs**: previously created unspent transaction outputs holding funds that the transaction consumes.
+ - **Unlock Blocks**: they hold the signatures authorizing the consumption of inputs.
+ - **Outputs**: newly created outputs holding transferred funds.
+
+In Stardust, you can create a simple transfer using a [Basic Output](https://github.com/iotaledger/tips/blob/master/tips/TIP-0018/tip-0018.md#basic-output).
+Basic Outputs define the base token funds they hold in the _Amount_ field. They have
+to have at least one [Unlock Condition](https://github.com/iotaledger/tips/blob/master/tips/TIP-0018/tip-0018.md#unlock-conditions)
+defined: the [Address Unlock Condition](https://github.com/iotaledger/tips/blob/master/tips/TIP-0018/tip-0018.md#address-unlock-condition).
+
+It means that to unlock the output in a transaction, you have to present a valid signature for the recipient's address.
+The signature signs the whole transaction content, thereby authorizing the consumption of inputs and
+declaring the intention to create new outputs.
+
+The figure below shows transaction A, which:
+
+1. Consumes as input a _Basic Output_ with _100i_ locked under _ownerAddress_,
+2. Provides an _Unlock_, namely a _Signature Unlock_ that contains a valid signature of the transaction content corresponding
+to the private key behind _ownerAddress_,
+3. Creates a new _Basic Output_ with _100i_ locked under the recipient's address, namely _recipientAddress_.
+
+![Transaction A - Changing Owner](/img/stardust_explanations/stardust_ledger_anatomy/simple_transaction/tx_A.svg)
+
