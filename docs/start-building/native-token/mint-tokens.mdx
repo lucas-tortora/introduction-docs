@@ -1,17 +1,20 @@
 # Mint Tokens
 
-Now that we have the foundry, it's time to mint native tokens. We simply need to transition the foundry in a transaction,
-declare that we mint tokens and place them in an output of our choice.
+Once you have [created a foundry](create-foundry.mdx), you can mint native tokens. You only need to transition the
+foundry in a transaction, declare that you mint tokens and place them in an output of our choice.
 
-Tokens controlled by a foundry have a globally unique identifier, called _Token ID_, that is derived from the properties
-of the foundry. To get the _Token ID_, one has to concatenate:
- - the serialized _Alias Address_ that controls the foundry (33 bytes),
- - the _Serial Number_ of the foundry,
- - and the _Token Scheme Type_.
+Tokens controlled by a foundry have a globally unique identifier called _Token ID_ that is derived from the properties
+of the foundry. To get the _Token ID_, you have to concatenate:
+- The serialized _Alias Address_ that controls the foundry (33 bytes).
+- The _Serial Number_ of the foundry.
+- The _Token Scheme Type_.
 
-By knowing the _Token ID_, one can fetch current unspent foundry output from the Indexer API defined in [TIP-26](https://github.com/iotaledger/tips/blob/indexer-api/tips/TIP-0026/tip-0026.md).
+By knowing the _Token ID_, you can fetch current unspent foundry outputs from the Indexer API defined in
+[TIP-26](https://github.com/iotaledger/tips/blob/indexer-api/tips/TIP-0026/tip-0026.md).
 
-Transaction B mints all available tokens in the foundry.
+## Example Transaction
+
+Transaction B mints all the available tokens in the foundry.
  - _Minted Tokens_ in _Foundry Output #2_ is increased by the number of minted tokens, namely 1000.
  - 500 tokens are minted into _Basic Output #1_ and locked to _mintAddress_.
  - 500 tokens are minted into _Basic Output #2_ and locked to _vestAddress_. Additionally, a timelock is specified on

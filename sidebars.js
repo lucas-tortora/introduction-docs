@@ -133,11 +133,15 @@ module.exports = {
                     label: 'Alias Transactions',
                     link: {
                         type:'doc',
-                        id:'start-building/alias/introduction'
+                        id:'start-building/alias/introduction',
                     },
                     items:
                         [
-                            'start-building/alias/introduction',
+                            {
+                                type:'doc',
+                                id:'start-building/alias/introduction',
+                                label: 'Introduction'
+                            },
                             'start-building/alias/create',
                             'start-building/alias/state-transitions',
                             'start-building/alias/governance-transitions',

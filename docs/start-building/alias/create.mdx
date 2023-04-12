@@ -13,28 +13,35 @@ import TabItem from '@theme/TabItem';
 
 # Create an Alias
 
-Just like a regular _Basic Output_, an _Alias Output_ also has:
- - _Amount_ to hold base token
- - _Unlock Conditions_ that define how the output can be unlocked
- - _Features_ that don't modify the unlocking.
+Just like a _Basic Output_, an _Alias Output_ also must have:
+ - __Amount__ to hold base token.
+ - __Unlock Conditions__ that define how the output can be unlocked.
+ - __Features__ that don't modify the unlocking.
 
 On top of these, it also defines:
- - _State Index_ that has to be incremented in every transaction initiated by the _State Controller_.
- - _State Metadata_ that may hold binary data,
- - _Foundry Counter_ that defines how many foundries the alias has already created,
- - _Immutable Features_ that are regular _Features_ defined upon creation which can never be modified afterwards.
+
+ - __State Index__ that has to be incremented in every transaction initiated by the _State Controller_.
+ - __State Metadata__ that may hold binary data.
+ - __Foundry Counter__ that defines how many foundries the alias has created.
+ - __Immutable Features__ that are regular _Features_ defined upon creation which can never be modified afterward.
+
+## Available Unlock Conditions
 
 Alias outputs only support two type of unlock conditions:
- - _State Controller Address Unlock Condition_ that defines the state controller,  and
- - _Governor Address Unlock Condition_ that defines the governor of the alias.
+
+ - __State Controller Address Unlock Condition__ that defines the state controller.
+ - __Governor Address Unlock Condition__ that defines the governor of the alias.
+
+## Example Transaction
 
 Transaction A shows the process of creating a new alias output and hence an alias account. Notice the creation
 constraints enforced by the protocol:
- - _Alias ID_ must be zeroed out. This signals to the protocol that the alias account is new and when the transaction confirms,
-a unique _Alias ID_ must be generated.
- - _State Index_ must be zero as this is the first possible state the alias represents.
- - _Foundry Counter_ must be zero as the alias doesn't control any foundries yet.
- - _Issuer_ and _Sender_ addresses must be unlocked in the transaction if present.
+
+ - __Alias ID__ must be zeroed out. This signals to the protocol that the alias account is new and when the transaction
+confirms, a unique __Alias ID__ must be generated.
+ - __State Index__ must be zero as this is the first possible state the alias represents.
+ - __Foundry Counter__ must be zero as the alias doesn't control any foundries yet.
+ - __Issuer__ and __Sender__ addresses must be unlocked in the transaction if present.
 
 ![Transaction A - Creating an Alias](/img/stardust_explanations/stardust_ledger_anatomy/alias_transaction/tx_A.svg)
 
@@ -42,15 +49,9 @@ When _Alias Output #1_ from Transaction A is consumed in a subsequent transactio
 transitioned alias must be set to the protocol generated unique identifier, which is the Blake2b-256 hash of the
 _Output ID_ of _Alias Output #1_.
 
-
-## Related How-to Guides, Code Examples and Tutorials
+## Related How-to Guides
 
 <Tabs>
-<TabItem value="wallet.rs" label="wallet.rs" >
-
-- [Destroy an Alias Output](https://wiki.iota.org/shimmer/wallet.rs/how_tos/native_tokens/destroy_alias_output/)
-
-</TabItem>
 <TabItem value="iota.rs" label="iota.rs">
 
 - [Build an Alias Output](https://wiki.iota.org/shimmer/iota.rs/how_tos/build_alias_output/).

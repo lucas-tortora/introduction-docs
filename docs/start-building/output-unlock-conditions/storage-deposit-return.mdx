@@ -19,17 +19,23 @@ that need to be present in an output is 100i. If you wanted to send only 1i to t
 101i to the recipient's address with the extra condition that recipient can only use the funds if the recipient refunds
 you in the very same transaction with 100i.
 
+## Example Transactions
+
+### Send a Micro-transaction
+
 Transaction G show the creation of an output with _Storage Deposit Return Unlock Condition_. Notice, that _Basic Output #11_
 holds 101i, and the unlock condition defines the _Return Amount_ of 100i to _ReturnAddress_ _ownerAddress_. All in all,
 the recipient can only freely use 1i when recipient consumes the output in Transaction H.
 
-![Transaction G - Sending microfunds](/img/stardust_explanations/stardust_ledger_anatomy/simple_transaction/tx_G.svg)
+![Transaction G - Sending a Micro-transaction](/img/stardust_explanations/stardust_ledger_anatomy/simple_transaction/tx_G.svg)
+
+### Receive a Micro-transaction
 
 In order for the recipient to claim the 1i, the recipient needs to sweep it into one of their own outputs. Therefore,
 the recipient consumes _Basic Output #12_ in the transaction that holds the funds. On the output side, the recipient has
 to have _Basic Output #13_ that refunds the original sender, and create _Basic Output #14_ that sweeps the 1i.
 
-![Transaction H - Receiving microfunds](/img/stardust_explanations/stardust_ledger_anatomy/simple_transaction/tx_H.svg)
+![Transaction H - Receiving a Micro-transaction](/img/stardust_explanations/stardust_ledger_anatomy/simple_transaction/tx_H.svg)
 
 What forces the recipient to post and execute Transaction H? Nothing. The recipient can just keep the sender's 100i in
 limbo forever. That is why it is handy that you can combine unlock conditions. For example, the sender can add an [expiration

@@ -4,13 +4,19 @@ Burning tokens by token holders without the involvement of the foundry is possib
 storage deposit of the underlying tokens. What would happen if _mintAddress_ in _Basic Output #3_ is not controlled by the
 issuer, but some other entity?
 
-They obviously can't melt the tokens without controlling the foundry, therefore they can't free up the base tokens (IOTA/SMR)
-in _Basic Output #3_. Unless the issuer buys back the tokens or someone else relieves the user by taking the tokens and
-refunding the storage deposit, it is locked forever. Burning makes it possible to "forget" about these tokens and free
-up the storage deposit.
+They obviously can't melt the tokens without controlling the foundry, therefore they can't free up the base tokens
+(IOTA/SMR) in _Basic Output #3_. Unless the issuer buys back the tokens or someone else relieves the user by taking the
+tokens and refunding the storage deposit, it is locked forever. Burning native tokens allows you to discard them and
+free up the storage deposit.
+
+:::warning
 
 Burnt tokens are no longer tracked in the ledger, therefore burning is conceptually equivalent to sending to the zero address
 without a storage deposit.
+
+:::
+
+## Example Transaction
 
 Transaction D burns all tokens in _Basic Output #3_. Notice that _mintAddress_ doesn't have to have the approval of the
 foundry and the controlling alias account.
