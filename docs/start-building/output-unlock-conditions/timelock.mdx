@@ -1,7 +1,7 @@
 # Timelock Funds in Transfers
 
-With Stardust, it is possible to lock funds away based on time. When an output has a [Timelock Unlock Condition](https://github.com/iotaledger/tips/blob/master/tips/TIP-0018/tip-0018.md#timelock-unlock-condition)
-defined, not even its rightful owner can unlock it before the timelock expires. Just like in the case of the Transaction C and D,
+With Stardust, you can lock funds away based on time. When an output has a [Timelock Unlock Condition](https://github.com/iotaledger/tips/blob/master/tips/TIP-0018/tip-0018.md#timelock-unlock-condition)
+defined, not even its rightful owner can unlock it before the timelock expires. Just like in the case of [transaction C](expiration.mdx#claim-non-expired-funds) and [transaction D](expiration.mdx#claim-expired-funds),
 the notion of time in the ledger is determined by the timestamp of the milestone that confirms the transaction.
 
 Transaction E creates an output owned by the recipient but timelocked until _May 24 2022 18:00:00_.

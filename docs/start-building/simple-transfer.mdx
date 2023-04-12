@@ -6,6 +6,9 @@ keywords:
 description: Simple Transfers in Stardust.
 image: /img/logo/preview.png
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Transfer Funds to an Address
 
 A simple transaction moves funds from one user account to another. On a high level, a transaction must define 3 things:
@@ -14,13 +17,16 @@ A simple transaction moves funds from one user account to another. On a high lev
  - **Outputs**: newly created outputs holding transferred funds.
 
 In Stardust, you can create a simple transfer using a [Basic Output](https://github.com/iotaledger/tips/blob/master/tips/TIP-0018/tip-0018.md#basic-output).
-Basic Outputs define the base token funds they hold in the _Amount_ field. They have
-to have at least one [Unlock Condition](https://github.com/iotaledger/tips/blob/master/tips/TIP-0018/tip-0018.md#unlock-conditions)
-defined: the [Address Unlock Condition](https://github.com/iotaledger/tips/blob/master/tips/TIP-0018/tip-0018.md#address-unlock-condition).
+Basic Outputs define the base token funds they hold in the _Amount_ field.
 
-It means that to unlock the output in a transaction, you have to present a valid signature for the recipient's address.
-The signature signs the whole transaction content, thereby authorizing the consumption of inputs and
-declaring the intention to create new outputs.
+## Add the Recipient Address
+
+Basic Outputs need to have at least one
+[Unlock Condition](https://github.com/iotaledger/tips/blob/master/tips/TIP-0018/tip-0018.md#unlock-conditions): the
+[Address Unlock Condition](https://github.com/iotaledger/tips/blob/master/tips/TIP-0018/tip-0018.md#address-unlock-condition).
+This means that to unlock the output in a transaction, you have to present a valid signature for the recipient's address.
+The signature signs the whole transaction content, thereby authorizing the consumption of inputs and declaring the
+intention to create new outputs.
 
 The figure below shows transaction A, which:
 
@@ -31,3 +37,24 @@ to the private key behind _ownerAddress_,
 
 ![Transaction A - Changing Owner](/img/stardust_explanations/stardust_ledger_anatomy/simple_transaction/tx_A.svg)
 
+## Related How-to Guides
+
+<Tabs>
+<TabItem value="wallet.rs" label="wallet.rs" >
+
+- [Send a Transaction](https://wiki.iota.org/shimmer/wallet.rs/how_tos/outputs_and_transactions/send_transaction/)
+
+</TabItem>
+<TabItem value="iota.rs" label="iota.rs">
+
+- [Build a Basic Output](https://wiki.iota.org/shimmer/iota.rs/how_tos/build_output/)
+- [Send a Transaction](https://wiki.iota.org/shimmer/iota.rs/how_tos/prepare_sign_transaction/)
+
+</TabItem>
+<TabItem value="iota.js" label="iota.js">
+
+- [Send a Transaction](https://wiki.iota.org/shimmer/iotajs/how_tos/transaction/)
+- [Value Transaction Tutorial](https://wiki.iota.org/shimmer/iotajs/tutorials/value-transactions/introduction/)
+
+</TabItem>
+</Tabs>
