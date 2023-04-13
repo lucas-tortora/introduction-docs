@@ -21,7 +21,7 @@ Each output defines who is allowed to unlock them via an address. The protocol o
 transactions if the owner can present a valid digital signature corresponding to the owner address recorded in the output
 itself.
 
-![The UTXO Model](/img/stardust_explanations/what_is_stardust/rethinking_utxo/utxo.svg)
+![The UTXO Model](/img/stardust_explanations/what-is-stardust/rethinking-utxo/utxo.svg)
 
 In Chrysalis an output consists of a `{tokens, address}` pair, therefore all you can do with outputs is define their
 owner and who is allowed to unlock them. There is no restrictions whatsoever on what one might do with the funds in
@@ -50,4 +50,4 @@ As a consequence, Stardust implements a limited set of programs and commands via
 built-in ledger programs is to support second-layer IOTA Smart Contracts, the general, Turing-complete decentralized
 application platform on which any smart contract logic can be implemented.
 
-To learn more about the ledger programs and outputs, check out [Anatomy of Stardust Ledger](../../how_tos/introduction.md).
+To learn more about the ledger programs and outputs, check out [Anatomy of Stardust Ledger](../../start-building/introduction.md).

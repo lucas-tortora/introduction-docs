@@ -38,57 +38,57 @@ module.exports = {
             items: [
                 {
                     type: 'doc',
-                    id: 'explanations/what_is_stardust/what_is_stardust',
+                    id: 'explanations/what-is-stardust/what-is-stardust',
                     label: `Introduction`
                 },
                 {
                     type: 'doc',
-                    id: 'explanations/what_is_stardust/rethink_utxo',
+                    id: 'explanations/what-is-stardust/rethink-utxo',
                     label: `Rethinking UTXO`
                 },
                 {
                     type: 'doc',
-                    id: 'explanations/what_is_stardust/sc_support',
+                    id: 'explanations/what-is-stardust/sc-support',
                     label: `Smart Contract Chain Support`
                 },
                 {
                     type: 'doc',
-                    id: 'explanations/what_is_stardust/tokenization',
+                    id: 'explanations/what-is-stardust/tokenization',
                     label: `Tokenization`
                 },
                 {
                     type: 'doc',
-                    id: 'explanations/what_is_stardust/storage_deposit',
+                    id: 'explanations/what-is-stardust/storage-deposit',
                     label: `Storage Deposit`
                 },
                 {
                     type: 'doc',
-                    id: 'explanations/what_is_stardust/unlock_conditions',
+                    id: 'explanations/what-is-stardust/unlock-conditions',
                     label: `Output Unlock Conditions`
                 },
                 {
                     type: 'doc',
-                    id: 'explanations/what_is_stardust/output_features',
+                    id: 'explanations/what-is-stardust/output-features',
                     label: `Output Features`
                 },
                 {
                     type: 'doc',
-                    id: 'explanations/what_is_stardust/protecting_users',
+                    id: 'explanations/what-is-stardust/protecting-users',
                     label: `Protecting Users`
                 },
                 {
                     type: 'doc',
-                    id: 'explanations/what_is_stardust/data_processing',
+                    id: 'explanations/what-is-stardust/data-processing',
                     label: `Offloading Data Processing`
                 },
                 {
                     type: 'doc',
-                    id: 'explanations/what_is_stardust/dynamic_pow',
+                    id: 'explanations/what-is-stardust/dynamic-pow',
                     label: `Dynamic PoW`
                 },
                 {
                     type: 'doc',
-                    id: 'explanations/protocol_tip',
+                    id: 'explanations/protocol-tip',
                     label: 'Protocol TIPs'
                 },
             ]
